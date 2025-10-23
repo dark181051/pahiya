@@ -1,0 +1,102 @@
+/* Importing a Google Font for better style */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap'); /* Added Quicksand */
+
+body {
+    background: url('stars.jpeg') no-repeat center center fixed; /* Your starry background */
+    background-size: cover;
+    color: white; /* Text color for better contrast */
+    font-family: 'Quicksand', sans-serif; /* Changed to Quicksand for a cuter feel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Optional: Add a subtle overlay to make text more readable on busy backgrounds */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+    z-index: -1;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent white box */
+    padding: 40px;
+    border-radius: 30px; /* More rounded container */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Stronger, softer shadow */
+    color: #333; /* Darker text inside the container */
+    max-width: 90%;
+    width: 400px;
+}
+
+.opening-image {
+    width: 160px; /* Slightly larger image */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 6px solid #ff99cc; /* Softer pink border */
+    animation: pulse 1.8s infinite alternate ease-in-out; /* Slower, smoother animation */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(255,153,204,0.7); }
+    100% { transform: scale(1.06); box-shadow: 0 0 20px rgba(255,153,204,0.9); }
+}
+
+.question {
+    font-family: 'Pacifico', cursive; /* Keep Pacifico for the main question */
+    font-size: 2.8em; /* Slightly larger question */
+    margin-bottom: 35px;
+    color: #ff69b4; /* Cute pink */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.options button, .moving-btn, #no-btn-stay { /* Apply to all relevant buttons */
+    padding: 12px 35px; /* More padding */
+    margin: 0 15px;
+    border: none;
+    border-radius: 25px; /* Very rounded, pill-like */
+    font-size: 1.3em; /* Slightly larger text */
+    font-weight: 700; /* Bolder text */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Smoother transition for all properties */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle button shadow */
+    letter-spacing: 0.5px; /* A little spacing */
+}
+
+#yes-btn, .moving-btn { /* Yes button and the moving button */
+    background-color: #8ce98c; /* Softer green */
+    color: #333; /* Darker text for contrast */
+}
+
+#yes-btn:hover, .moving-btn:hover {
+    background-color: #6edc6e; /* Slightly darker green on hover */
+    transform: translateY(-3px) scale(1.02); /* Lift and slightly enlarge */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#no-btn, #no-btn-stay { /* No button and the staying "No" button */
+    background-color: #ffb3b3; /* Softer red/pink */
+    color: #333;
+}
+
+#no-btn:hover, #no-btn-stay:hover {
+    background-color: #ff9999; /* Slightly darker red on hover */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#response-message {
+    margin-top: 25px; /* More space */
+    font-size: 1.6em; /* Larger response message */
+    color: #ff69b4; /* Cute pink for response */
+    font-family: 'Pacifico', cursive; /* Pacifico for response too */
+    height: 1.5em; 
+}

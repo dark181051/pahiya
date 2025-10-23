@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wait, What?</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom CSS for this page's button positioning */
+        .no-options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px; /* Give space for the button to move */
+            position: relative; /* Essential for positioning the moving button */
+            padding: 30px; /* Add padding to prevent button from running out of view */
+        }
+        
+        #yes-btn-move {
+            position: absolute; /* Allows for absolute positioning */
+            transition: all 0.1s; /* Smooth movement */
+            margin: 0; /* Override default button margin */
+        }
+
+        #no-btn-stay {
+             /* Position the "No" button off to the side so the "Yes" button has space */
+             margin-left: 150px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="question" style="color: #007BFF;">Sach me? 🤔</h1>
+        <p style="font-size: 1.5em; margin-bottom: 30px;">Are you absolutely sure?</p>
+
+        <div class="no-options">
+            <button id="yes-btn-move" style="background-color: #4CAF50; color: white;">Yes</button> 
+            
+            <button id="no-btn-stay" style="background-color: #f44336; color: white;" 
+                    onclick="alert('Liar! You totally miss me. 😉');">No</button>
+        </div>
+    </div>
+
+    <script src="no-script.js"></script> 
+</body>
+</html>
